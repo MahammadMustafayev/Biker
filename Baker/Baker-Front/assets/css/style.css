@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.f:hover{
+    width: 305px !important; 
+    height: 305px !important;
+    transition: 0.5s !important;
+}
+.g:hover{
+    background-color: orange !important;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.h:hover{
+    margin-left: 5%;
+    color: orange !important;
+    transition: 0.5s;
+}
