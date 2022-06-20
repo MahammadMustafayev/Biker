@@ -1,0 +1,47 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Manage/Views/Shared/_ManageLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="Name">Name</label>
+                <input asp-for="Name" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="Desc">Description</label>
+                <input asp-for="Desc" class="form-control" placeholder="Description">
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="Price">Price</label>
+                <input asp-for="Price" class="form-control" placeholder="Price">
+            </div>
+        </div>
+        <div class="form-row">
+
+            <div class="form-group col-md-4">
+                <label asp-for="CompanyName">CompanyName</label>
+                <input asp-for="CompanyName" class="form-control" placeholder="CompanyName">
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="IsSale" >IsSale</label>
+                <input asp-for="IsSale" class="form-control" placeholder="IsSale">
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="IsDeleted" >IsDeleted</label>
+                <input asp-for="IsDeleted" class="form-control" placeholder="IsDeleted">
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="Photo"></label>
+                <input type="file" asp-for="Photo" class="form-control" placeholder="Image">
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+    </form>
+</div>
+

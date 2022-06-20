@@ -24,7 +24,7 @@ namespace Baker_Back.Controllers
         {
             HomeVM homeVM = new HomeVM
             {
-                Products = _context.Products.Where(x => x.IsDeleted == false).ToList()
+                Products = _context.Products.Where(x => x.IsDeleted == false).Take(6).ToList()
             };
             return View(homeVM);
         }

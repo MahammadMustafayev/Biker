@@ -1,4 +1,4 @@
-﻿
+﻿@model HomeVM
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -61,7 +61,7 @@
         <div class="text-xxl-center">
             <h4 class="fw-bold fs-2">We design delicious</h4>
             <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                Lorem ipsum  dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
                 tincidunt ut laoreet dolore magna aliquam erat volutpat.
             </p>
         </div>
@@ -159,78 +159,18 @@
             </p>
         </div>
         <div class="row ">
-            <div class="col-md-3  text-xxl-center mt-3">
-                <img src="~/assets/image/product/p1.png" alt="">
-                <h4 class="text-uppercase mt-3">MONKEY BREAD</h4>
-                <p class="text-muted mt-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget
-                    risus
-                    in nisl dapibus fermentum.
-                </p>
-            </div>
-            <div class="col-md-3 text-xxl-center mt-3 ">
-                <img src="~/assets/image/product/p8.png" alt="">
-                <h4 class="text-uppercase mt-3">MONKEY BREAD</h4>
-                <p class="text-muted mt-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget
-                    risus
-                    in nisl dapibus fermentum.
-                </p>
-            </div>
-            <div class="col-md-3 text-xxl-center mt-3 ">
-                <img src="~/assets/image/product/p2.png" alt="">
-                <h4 class="text-uppercase mt-3">OLIVETTA BREAD</h4>
-                <p class="text-muted mt-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget
-                    risus
-                    in nisl dapibus fermentum.
-                </p>
-            </div>
-            <div class="col-md-3 text-xxl-center mt-3 ">
-                <img src="~/assets/image/product/p3.png" alt="">
-                <h4 class="text-uppercase mt-3">MONKEY BREAD</h4>
-                <p class="text-muted mt-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget
-                    risus
-                    in nisl dapibus fermentum.
-                </p>
-            </div>
-            <div class="col-md-3 text-xxl-center mt-3 ">
-                <img src="~/assets/image/product/p4.png" alt="">
-                <h4 class="text-uppercase mt-3">MONKEY BREAD</h4>
-                <p class="text-muted mt-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget
-                    risus
-                    in nisl dapibus fermentum.
-                </p>
-            </div>
-            <div class="col-md-3  text-xxl-center mt-3  ">
-                <img src="~/assets/image/product/p5.png" alt="">
-                <h4 class="text-uppercase mt-3">MONKEY BREAD</h4>
-                <p class="text-muted mt-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget
-                    risus
-                    in nisl dapibus fermentum.
-                </p>
-            </div>
-            <div class="col-md-3 text-xxl-center mt-3 ">
-                <img src="~/assets/image/product/p6.png" alt="">
-                <h4 class="text-uppercase mt-3">MONKEY BREAD</h4>
-                <p class="text-muted mt-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget
-                    risus
-                    in nisl dapibus fermentum.
-                </p>
-            </div>
-            <div class="col-md-3 text-xxl-center mt-3">
-                <img src="~/assets/image/product/p7.png" alt="">
-                <h4 class="text-uppercase mt-3">MONKEY BREAD</h4>
-                <p class="text-muted mt-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget
-                    risus
-                    in nisl dapibus fermentum.
-                </p>
-            </div>
+            @foreach (var item in Model.Products)
+            {
+                <div class="col-md-3  text-xxl-center mt-3">
+                    <img src="~/assets/image/product/@item.Image" alt="">
+                    <h4 class="text-uppercase mt-3">@item.Name</h4>
+                    <p class="text-muted mt-3">
+                        @item.Desc.
+                    </p>
+                </div>
+            }
+
+
 
         </div>
     </div>

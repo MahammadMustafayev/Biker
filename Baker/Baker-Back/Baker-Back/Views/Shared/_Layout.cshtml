@@ -23,7 +23,7 @@
                                 <a class="nav-link text-white dropdown-toggle " href="#">Home</a>
                             </li>
                             <li class="nav-item pt-4">
-                                <a class="nav-link text-white dropdown-toggle" href="#">Pages</a>
+                                <a class="nav-link text-white dropdown-toggle" asp-area="Manage" asp-controller="Product" asp-action="Index">Pages</a>
                             </li>
                             <li class="nav-item dropdown pt-4">
                                 <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown"
@@ -46,9 +46,9 @@
                                     Shop
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Shop List</a></li>
-                                    <li><a class="dropdown-item" href="#">Shop Product</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Shop" asp-action="Index">Shop List</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Cart" asp-action="Index">Shop Cart</a></li>
+                                    
                                 </ul>
                             </li>
                             <li class="nav-item dropdown pt-4">
